@@ -12,7 +12,7 @@ coeffsUV(:,:,5) = rho.*dx_C.*dy_C./dt;
 coeffsUV(:,:,6) = sum(coeffsUV(:,:,1:5),3)+DeltaF;
 for i=2:cI-1
   for j=2:cJ-1
-    sourceUV(i,j,1) = (P(i-1,j) - P(i+1,j)) * Ax(i,j)/2;%<<-----!!!!
-    sourceUV(i,j,2) = (P(i,j-1) - P(i,j+1)) * Ay(i,j)/2;%<<-----!!!!
+    sourceUV(i,j,1) = (P(i-1,j,timestep) - P(i+1,j,timestep)) * Ax(i,j)/2;%<<-----!!!!
+    sourceUV(i,j,2) = (P(i,j-1,timestep) - P(i,j+1,timestep)) * Ay(i,j)/2;%<<-----!!!!
   end
 end

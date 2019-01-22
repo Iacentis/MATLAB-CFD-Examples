@@ -10,7 +10,7 @@ Ue        = zeros(cI,cJ);    % Rhie-Chow east face velocity matrix
 Uw        = zeros(cI,cJ);    % Rhie-Chow west face velocity matrix
 Vn        = zeros(cI,cJ);    % Rhie-Chow north face velocity matrix
 Vs        = zeros(cI,cJ);    % Rhie-Chow south face velocity matrix
-P         = zeros(cI,cJ);    % pressure matrix
+P         = zeros(cI,cJ,nTimesteps);    % pressure matrix
 Pp        = zeros(cI,cJ);    % pressure correction matrix
 F         = zeros(cI,cJ,4);  % Convective Coefficents
 D         = zeros(cI,cJ,4);  % Diffusive Coefficents
@@ -20,4 +20,3 @@ residuals = zeros(3,1);      % U, V and continueity residuals
 % Inlet and Outlet boundary conditions (as in, velocity components
 % perpendicular to the wall) all that well, and thus should be avoided. 
 U(:,end,:) = UWall;
-U(:,1,:) = -UWall;

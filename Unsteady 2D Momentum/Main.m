@@ -7,6 +7,7 @@ CalculateGeometry
 CalculateDiffusive
 for timestep = 2:nTimesteps
     residuals = zeros(3,1);
+    P(:,:,timestep) = P(:,:,timestep-1);
     for iter=1:nIterations
         CalculateFluxes
         CalculateCoefficients
