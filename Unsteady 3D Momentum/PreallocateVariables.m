@@ -23,4 +23,4 @@ residuals = zeros(4,1);      % U, V, W and continueity residuals
 % A note: The method used (Coallocated grid with Rhie-chow) does not handle
 % Inlet and Outlet boundary conditions (as in, velocity components
 % perpendicular to the wall) all that well, and thus should be avoided. 
-W(end,:,:,:) = UWall;
+U(:,:,end,:) = UWall;

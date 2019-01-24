@@ -4,14 +4,14 @@ UWall = 1;
 % density
 rho   = 1;
 %Reynolds Number
-Re = 1e3; 
+Re = 2.9e2; 
 %% Geometric inputs (fixed so that a fair comparison can be made)
 % number of nodes X direction.
-nI = 22;
+nI = 25;
 % number of nodes Y direction.
-nJ = 22;
+nJ = 25;
 % number of nodes Z direction
-nK = 22;
+nK = 25;
 % length in X direction
 xL = 1;
 % length in Y direction
