@@ -30,14 +30,14 @@ for timestep = 2:nTimesteps
         break;
     end
 end
-CreateGif
+%CreateGif
 %%
 Blip = U./sqrt(U.^2+V.^2);
 Blop = V./sqrt(U.^2+V.^2);
 subplot(1,2,1)
-quiver(xCoords_C,yCoords_C,U,V,0)
+quiver(xCoords_C,yCoords_C,U(:,:,end),V(:,:,end),0)
 axis([0,1,0,1])
 subplot(1,2,2)
-quiver(xCoords_C,yCoords_C,Blip,Blop,0.4)
+quiver(xCoords_C,yCoords_C,Blip(:,:,end),Blop(:,:,end),0.4)
 axis([0,1,0,1])
 disp('Finished')

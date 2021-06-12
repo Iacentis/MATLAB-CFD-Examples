@@ -7,9 +7,9 @@ rho   = 1;
 Re = 1e3; 
 %% Geometric inputs (fixed so that a fair comparison can be made)
 % number of nodes X direction.
-nI = 22;
+nI = 52;
 % number of nodes Y direction.
-nJ = 22;
+nJ = 52;
 % length in X direction
 xL =  1;
 % length in Y direction
